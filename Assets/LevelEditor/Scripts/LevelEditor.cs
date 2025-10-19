@@ -35,6 +35,9 @@ namespace LevelEditor
         private CellEditor[,] grid;
         [SerializeField] CellEditor _cellPrefab;
 
+        //Block 
+        [SerializeField] ShapeData[] _shapeDatas;
+
         private void Awake()
         {
             _btnInitGrid.onClick.AddListener(OnClickInitGrid);
@@ -124,6 +127,16 @@ namespace LevelEditor
             float offsetX = col - (Cols - 1) / 2f;
             float offsetZ = row - (Rows - 1) / 2f;
             return new Vector3(offsetX, 0, offsetZ);
+        }
+        #endregion
+
+        #region BLOCK GENERATE
+        public void GenerateBlocks()
+        {
+            for(var i = 0; i < _shapeDatas.Length; ++i)
+            {
+
+            }
         }
         #endregion
     }

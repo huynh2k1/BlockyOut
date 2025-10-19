@@ -35,7 +35,7 @@ public class Block : MonoBehaviour
             {
                 int rowIndex = shapeData.rows - 1 - r;
                 //int colIndex = shapeData.columns - 1 - c;
-                bool cellValue = shapeData.board[rowIndex].column[c];
+                bool cellValue = shapeData.board[rowIndex].column[c-];
                 if (cellValue)
                 {
                     cells[r, c] = Instantiate(_cellPrefab, transform);
