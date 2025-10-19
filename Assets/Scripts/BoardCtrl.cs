@@ -9,15 +9,15 @@ public class BoardCtrl : MonoBehaviour
     [SerializeField] Cell cellPrefab;
     [SerializeField] Cell[,] cells;
 
+
     private void Start()
     {
-        InitGrid();
+        
     }
 
     public void InitGrid()
     {
         cells = new Cell[Rows, Columns];
-
 
         for (var r = 0; r < Rows; r++)
         {
@@ -30,6 +30,11 @@ public class BoardCtrl : MonoBehaviour
                 cells[r, c].Col = c;
             }
         }
+    }
+
+    public void LoadCellType()
+    {
+
     }
 
     private Vector3 GetCellPosition(int row, int col)
