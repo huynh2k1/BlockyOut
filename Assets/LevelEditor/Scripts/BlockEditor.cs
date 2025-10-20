@@ -23,8 +23,15 @@ public class BlockEditor : MonoBehaviour
     Vector2Int previousDragPoint;
     Vector2Int currentDragPoint;
 
+    bool IsInBoard = false;
+
     private void OnMouseDown()
     {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log("Click Chuột Phải");
+        }
+        if (IsInBoard) return;
         _initPos = transform.position;
         BlockEditor block = Instantiate(_blockPrefab, transform.parent);
         block.Initialize(_shapeData);
@@ -50,6 +57,7 @@ public class BlockEditor : MonoBehaviour
 
     private void OnMouseDrag()
     {
+        if (IsInBoard) return;
         float distance = Vector3.Distance(Camera.main.transform.position, transform.position);
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = distance; // 👈 thêm dòng này khi drag
@@ -74,7 +82,26 @@ public class BlockEditor : MonoBehaviour
 
     private void OnMouseUp()
     {
-        Destroy(gameObject);
+        if (IsInBoard)
+            return;
+        var board = LevelEditorCtrl.I.board;
+
+        if (board.hoverPoints.Count == 0)
+        {
+            // ❌ Không có chỗ đặt hợp lệ
+            Debug.Log("Không có vị trí hợp lệ, huỷ block");
+            Destroy(gameObject);
+            return;
+        }
+
+        board.PlaceCell(this);
+
+        Vector3 snapPos = board.GetSnapPosition(previousDragPoint, _shapeData);
+        Debug.Log($"{snapPos}, {previousDragPoint}");
+        transform.position = snapPos;
+        IsInBoard = true;
+        // Dọn hover
+        board.UnHover();
     }
 
     public void Initialize(ShapeData shapeData)

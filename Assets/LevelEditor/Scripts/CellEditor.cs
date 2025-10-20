@@ -23,7 +23,6 @@ namespace LevelEditor
         private void OnMouseDown()
         {
             CellSelectedEditor data = CellSelectedEditor.CurCellSelected;
-            Debug.Log($"{data.cellType.ToString()} {data.colorType.ToString()}");
             UpdateUI(data.cellType, data.colorType);
         }
 

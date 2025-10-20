@@ -379,8 +379,8 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 50, y: 50}
-  m_Spacing: {x: 20, y: 20}
+  m_CellSize: {x: 80, y: 80}
+  m_Spacing: {x: 50, y: 30}
   m_Constraint: 1
   m_ConstraintCount: 2
 --- !u!1 &344514411
@@ -1027,9 +1027,10 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -9}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1091146426}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &689234178
@@ -1044,10 +1045,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d426de2c89f82408ac83c67b62be86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _blockParents: {fileID: 689234177}
+  _blockParents: {fileID: 1091146426}
   _blockPrefab: {fileID: 808262334474952564, guid: 228e2a73eb628414eba110c8c92437ce, type: 3}
   _shapeDatas:
+  - {fileID: 11400000, guid: c7e03e7c129c36449b5abdda9e2650a2, type: 2}
+  - {fileID: 11400000, guid: 510e6c72c1508e448a8d99ade7e32a8d, type: 2}
+  - {fileID: 11400000, guid: 199fc33b9818ff44e9c6ebfae5784ef2, type: 2}
+  - {fileID: 11400000, guid: 6abbcd7112abb9d4ba79bd437649c699, type: 2}
+  - {fileID: 11400000, guid: 043795ce400209449948fc52358e8463, type: 2}
+  - {fileID: 11400000, guid: 47a23fcc6aba70140a803ee9f4abd82a, type: 2}
+  - {fileID: 11400000, guid: 8e63354018a08e24cbd81d524aa471d5, type: 2}
+  - {fileID: 11400000, guid: 77db9cbaac4dd164ea6eae16d00b076a, type: 2}
+  - {fileID: 11400000, guid: 8a17c1aa96d0f854194834849685caa5, type: 2}
   - {fileID: 11400000, guid: 0353083742aaf9e46ab74bfbcfa21736, type: 2}
+  - {fileID: 11400000, guid: 5b3ec1fdb95a3704b8a04884d1e13474, type: 2}
+  - {fileID: 11400000, guid: f1df80ec83eade146bf5b46b8f74d7de, type: 2}
+  - {fileID: 11400000, guid: 6a6b2595f2438fb439e54bb7a2e61e72, type: 2}
   spacing: 2
 --- !u!224 &754396087 stripped
 RectTransform:
@@ -1226,7 +1239,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 0}
+  m_SizeDelta: {x: 300, y: 0}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &1001113006
 GameObject:
@@ -1275,7 +1288,40 @@ MonoBehaviour:
   _gridTransform: {fileID: 1001113007}
   listCell: []
   _cellPrefab: {fileID: 6903903624063255966, guid: 431102f11ea172240b7fad782d569935, type: 3}
+  hoverPoints: []
   _shapeData: {fileID: 0}
+  listBlock: []
+--- !u!1 &1091146425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091146426}
+  m_Layer: 0
+  m_Name: BlockEditorParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091146426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091146425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 689234177}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636031253
 GameObject:
   m_ObjectHideFlags: 0

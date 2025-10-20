@@ -13,13 +13,14 @@ public class BoardEditor : MonoBehaviour
 
     private CellEditor[,] grid;
     private int[,] data; //0 Empty, 1 Hover, 2 Normal
-    private readonly List<Vector2Int> hoverPoints = new();
+    public List<Vector2Int> hoverPoints = new List<Vector2Int>();
 
     int Rows;
     int Columns;
     public Vector2 OffSet => new Vector2(Rows/2f, Columns/2f);
 
     [SerializeField] ShapeData _shapeData;
+    [SerializeField] List<BlockEditor> listBlock = new List<BlockEditor>();
 
     public void InitGrid(int _rows, int _columns)
     {
@@ -119,12 +120,11 @@ public class BoardEditor : MonoBehaviour
 
         if (data[point.y, point.x] > 0) return false;
 
-        return false;
+        return true;
     }
 
     private void Hover()
     {
-        Debug.Log("HOVER");
         foreach (var hoverPoint in hoverPoints)
         {
             data[hoverPoint.y, hoverPoint.x] = 1;
@@ -132,13 +132,40 @@ public class BoardEditor : MonoBehaviour
         }
     }
 
-    private void UnHover()
+    public void UnHover()
     {
         foreach (var hoverPoint in hoverPoints)
         {
             data[hoverPoint.y, hoverPoint.x] = 0;
+            grid[hoverPoint.y, hoverPoint.x].Normal();
             //grid[hoverPoint.y, hoverPoint.x].();
         }
         hoverPoints.Clear();
+    }
+
+    public void PlaceCell(BlockEditor block)
+    {
+        foreach (var p in hoverPoints)
+        {
+            // đặt cell vào board
+            data[p.y, p.x] = 2; // 2 = đã đặt block
+        }
+        listBlock.Add(block);   
+        // Đánh dấu vào data
+        // Update UI cell
+        //grid[point.y, point.x].Place(); // 👉 bạn có thể làm 1 hàm đổi màu / thay sprite
+    }
+    //Tính toán vị trí để đặt block lên board
+    public Vector3 GetSnapPosition(Vector2Int basePoint, ShapeData shapeData)
+    {
+        float offsetX = (shapeData.columns) / 2f;
+        float offsetZ = (shapeData.rows) / 2f;
+
+        //float x = basePoint.x - Columns / 2f + offsetX;
+        //float z = basePoint.y - Rows / 2f + offsetZ;
+        float x = basePoint.x + offsetX - OffSet.y;
+        float z = basePoint.y + offsetZ - OffSet.x;
+
+        return new Vector3(x, 0, z);
     }
 }
