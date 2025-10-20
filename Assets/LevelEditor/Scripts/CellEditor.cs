@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using GameConfig;
 using JetBrains.Annotations;
+using Unity.VisualScripting;
 namespace LevelEditor
 {
     public class CellEditor : MonoBehaviour
@@ -15,6 +16,7 @@ namespace LevelEditor
         public GameObject fieldObject;
         public GameObject borderObject;
         public GameObject emptyObject;
+        public GameObject hoverObject;
 
         public SpriteRenderer _borderRenderer;
 
@@ -30,6 +32,7 @@ namespace LevelEditor
             fieldObject.SetActive(false);
             borderObject.SetActive(false);
             emptyObject.SetActive(false);
+            hoverObject.SetActive(false);
 
             cellType = value;
             this.colorType = colorType;
@@ -54,15 +57,14 @@ namespace LevelEditor
             Destroy(gameObject);
         }
 
-        //private CellBoardType GetNextType(CellBoardType current)
-        //{
-        //    int next = (int)current + 1;
-        //    int max = System.Enum.GetValues(typeof(CellBoardType)).Length;
+        public void Normal()
+        {
+            hoverObject.SetActive(false);
+        }
 
-        //    if (next >= max)
-        //        next = 0;
-
-        //    return (CellBoardType)next;
-        //}
+        public void Hover()
+        {
+            hoverObject.SetActive(true);
+        }
     }
 }
