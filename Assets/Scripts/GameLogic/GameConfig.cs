@@ -1,5 +1,8 @@
-﻿namespace GameConfig
+﻿using System;
+
+namespace GameConfig
 {
+    [Serializable]
     public enum CellBoardType
     {
         Field = 0, //Phần bảng chơi
@@ -7,6 +10,7 @@
         Empty = 2, //None
     }
 
+    [Serializable]
     public enum ColorType
     {
         None,
@@ -18,7 +22,7 @@
         Yellow,
         Orange
     }
-
+    [Serializable]
     public enum BlockDir
     {
         None,

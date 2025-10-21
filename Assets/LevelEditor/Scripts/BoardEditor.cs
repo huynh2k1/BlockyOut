@@ -8,19 +8,19 @@ using UnityEngine.Rendering;
 public class BoardEditor : MonoBehaviour
 {
     [SerializeField] Transform _gridTransform;
-    [SerializeField] List<CellEditor> listCell = new List<CellEditor>();
     [SerializeField] CellEditor _cellPrefab;
+    [SerializeField] ShapeData _shapeData;
 
     private CellEditor[,] grid;
     private int[,] data; //0 Empty, 1 Hover, 2 Normal
+
+    public List<CellEditor> listCell = new List<CellEditor>();
     public List<Vector2Int> hoverPoints = new List<Vector2Int>();
+    public List<BlockEditor> listBlock = new List<BlockEditor>();
+    public Vector2 OffSet => new Vector2(Rows/2f, Columns/2f);
 
     int Rows;
     int Columns;
-    public Vector2 OffSet => new Vector2(Rows/2f, Columns/2f);
-
-    [SerializeField] ShapeData _shapeData;
-    [SerializeField] List<BlockEditor> listBlock = new List<BlockEditor>();
 
     public void InitGrid(int _rows, int _columns)
     {
@@ -143,7 +143,7 @@ public class BoardEditor : MonoBehaviour
         hoverPoints.Clear();
     }
 
-    public void PlaceCell(BlockEditor block)
+    public void PlaceBlock(BlockEditor block)
     {
         foreach (var p in hoverPoints)
         {
@@ -155,6 +155,15 @@ public class BoardEditor : MonoBehaviour
         // Update UI cell
         //grid[point.y, point.x].Place(); // 👉 bạn có thể làm 1 hàm đổi màu / thay sprite
     }
+
+    public void RemoveBlock(BlockEditor block)
+    {
+        if (listBlock.Contains(block))
+        {
+            listBlock.Remove(block);    
+        }
+    }
+
     //Tính toán vị trí để đặt block lên board
     public Vector3 GetSnapPosition(Vector2Int basePoint, ShapeData shapeData)
     {

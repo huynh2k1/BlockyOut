@@ -4,7 +4,7 @@ public class BlockSpawner : MonoBehaviour
 {
     [SerializeField] Transform _blockParents;
     [SerializeField] BlockEditor _blockPrefab;
-    [SerializeField] ShapeData[] _shapeDatas;
+    [SerializeField] BlocksVisualSO data;
 
     public float spacing = 2;
     
@@ -20,7 +20,7 @@ public class BlockSpawner : MonoBehaviour
         int cols = 7;
         float spacing = 3f;
 
-        for (int i = 0; i < _shapeDatas.Length; i++)
+        for (int i = 0; i < data.shapes.Length; i++)
         {
             int row = i / cols;
             int col = i % cols;
@@ -30,7 +30,7 @@ public class BlockSpawner : MonoBehaviour
             float zOffset = (rows - 1) * spacing * 0.5f;
 
             BlockEditor block = Instantiate(_blockPrefab, _blockParents);
-            block.Initialize(_shapeDatas[i]);
+            block.Initialize(data.shapes[i]);
 
             block.transform.localPosition = new Vector3(
                 col * spacing - xOffset,

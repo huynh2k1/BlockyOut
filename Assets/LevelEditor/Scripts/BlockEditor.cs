@@ -1,4 +1,5 @@
-﻿using LevelEditor;
+﻿using GameConfig;
+using LevelEditor;
 using UnityEngine;
 
 public class BlockEditor : MonoBehaviour
@@ -7,18 +8,18 @@ public class BlockEditor : MonoBehaviour
     public BlockWrapper data;
 
     [Header("References")]
+    [SerializeField] BlockModel blockModel;
     [SerializeField] Cell _cellPrefab;
-
     [SerializeField] BlockEditor _blockPrefab;
     [SerializeField] ShapeData _shapeData;
+
+    public Vector3 Position = Vector3.zero;
 
     Cell[,] cells;
     Vector2 center;
 
     Vector3 _prevMousePos;
     Vector3 _curMousePos;
-    Vector3 _initPos;
-    Vector3 _initScale;
 
     Vector2Int previousDragPoint;
     Vector2Int currentDragPoint;
@@ -27,16 +28,16 @@ public class BlockEditor : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (IsInBoard)
         {
-            Debug.Log("Click Chuột Phải");
+            CellSelectedEditor data = CellSelectedEditor.CurCellSelected;
+            UpdateVisual(data.colorType);
+            return;
         }
-        if (IsInBoard) return;
-        _initPos = transform.position;
+
         BlockEditor block = Instantiate(_blockPrefab, transform.parent);
         block.Initialize(_shapeData);
         block.transform.localPosition = transform.localPosition;
-        this.name = "Current";
 
         transform.SetParent(null);
         transform.localScale = Vector3.one;
@@ -47,9 +48,6 @@ public class BlockEditor : MonoBehaviour
 
         _prevMousePos = Camera.main.ScreenToWorldPoint(mousePos);
         _prevMousePos.y = 0;
-
-        transform.position = _initPos;
-        transform.localScale = Vector3.one;
 
         currentDragPoint = Vector2Int.RoundToInt((Vector2)transform.position - center);
         previousDragPoint = currentDragPoint;
@@ -90,14 +88,14 @@ public class BlockEditor : MonoBehaviour
         {
             // ❌ Không có chỗ đặt hợp lệ
             Debug.Log("Không có vị trí hợp lệ, huỷ block");
+            board.RemoveBlock(this);
             Destroy(gameObject);
             return;
         }
 
-        board.PlaceCell(this);
+        board.PlaceBlock(this);
 
         Vector3 snapPos = board.GetSnapPosition(previousDragPoint, _shapeData);
-        Debug.Log($"{snapPos}, {previousDragPoint}");
         transform.position = snapPos;
         IsInBoard = true;
         // Dọn hover
@@ -108,17 +106,22 @@ public class BlockEditor : MonoBehaviour
     {
         _shapeData = shapeData;
 
-        cells = new Cell[shapeData.rows, shapeData.columns];
-        data.Rows = shapeData.rows;
-        data.Cols = shapeData.columns;
+        cells = new Cell[_shapeData.rows, _shapeData.columns];
+        data.Rows = _shapeData.rows;
+        data.Cols = _shapeData.columns;
 
         center = new Vector2(data.Cols * 0.5f, data.Rows * 0.5f);
-        for (var r = 0; r < shapeData.rows; ++r)
+        if (blockModel.IsMeshValid(_shapeData))
         {
-            for (var c = 0; c < shapeData.columns; ++c)
+            blockModel.ChangeMesh(_shapeData);
+            return;
+        }
+        for (var r = 0; r < _shapeData.rows; ++r)
+        {
+            for (var c = 0; c < _shapeData.columns; ++c)
             {
-                int rowIndex = shapeData.rows - 1 - r;
-                bool cellValue = shapeData.board[rowIndex].column[c];
+                int rowIndex = _shapeData.rows - 1 - r;
+                bool cellValue = _shapeData.board[rowIndex].column[c];
                 if (cellValue)
                 {
                     cells[r, c] = Instantiate(_cellPrefab, transform);
@@ -126,6 +129,19 @@ public class BlockEditor : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void UpdateVisual(ColorType colorType)
+    {
+        if(colorType == ColorType.None)
+        {
+            var board = LevelEditorCtrl.I.board;
+            board.RemoveBlock(this);
+            Destroy(gameObject);
+            return;
+        }
+        blockModel.ChangeColorByType(colorType);
+        data.colorBlock = colorType;
     }
 
     void Hide()

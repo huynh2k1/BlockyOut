@@ -35,10 +35,14 @@ public class ShapeData : ScriptableObject
         }
     }
 
+    [Header("Grid Setting")]
     public int columns = 0;
     public int rows = 0;
-
     public Row[] board;
+
+    [Header("Mesh Settings")]
+    public Mesh meshData;
+    public Vector3 rotation;
 
     public void Clear()
     {
