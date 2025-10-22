@@ -19,5 +19,5 @@ MonoBehaviour:
   - column: 01
   - column: 01
   - column: 01
-  meshData: {fileID: 0}
+  meshData: {fileID: 4300000, guid: b9eea51da45d432408d0bf64ddb47424, type: 2}
   rotation: {x: 0, y: 0, z: 90}

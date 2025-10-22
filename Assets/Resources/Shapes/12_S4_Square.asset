@@ -17,3 +17,5 @@ MonoBehaviour:
   board:
   - column: 0101
   - column: 0101
+  meshData: {fileID: 4300000, guid: cb912a753a26d2d4584bc8fb9c4ebd6b, type: 2}
+  rotation: {x: 0, y: 0, z: 0}

@@ -7,6 +7,8 @@ public class BlockSpawner : MonoBehaviour
     [SerializeField] BlocksVisualSO data;
 
     public float spacing = 2;
+    public int rows = 3;
+    public int cols = 9;
     
     private void Start()
     {
@@ -16,8 +18,6 @@ public class BlockSpawner : MonoBehaviour
     #region BLOCK GENERATE
     public void GenerateBlocks()
     {
-        int rows = 2;
-        int cols = 7;
         float spacing = 3f;
 
         for (int i = 0; i < data.shapes.Length; i++)

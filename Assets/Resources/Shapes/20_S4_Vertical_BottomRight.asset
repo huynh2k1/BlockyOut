@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ae3340993e458348b815585e5e5024b, type: 3}
-  m_Name: 17_S5_+
+  m_Name: 20_S4_Vertical_BottomRight
   m_EditorClassIdentifier: 
-  columns: 3
+  columns: 2
   rows: 3
   board:
-  - column: 000100
-  - column: 010101
-  - column: 000100
+  - column: 0001
+  - column: 0001
+  - column: 0101
+  meshData: {fileID: 4300000, guid: e85b9df3bb5c4fc46b748e00c918c72c, type: 2}
+  rotation: {x: 0, y: 0, z: 0}

@@ -41,8 +41,6 @@ public class TransformData
 {
     public float x, y, z;
 
-    public TransformData() { }
-
     public TransformData(Vector3 v)
     {
         x = v.x;

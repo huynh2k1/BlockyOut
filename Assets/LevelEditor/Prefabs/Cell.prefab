@@ -47,8 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Row: 0
   Col: 0
-  mesh: {fileID: 0}
-  material: {fileID: 0}
 --- !u!1 &7042317264335506091
 GameObject:
   m_ObjectHideFlags: 0

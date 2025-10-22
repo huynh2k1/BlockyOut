@@ -17,7 +17,7 @@ public class BoardEditor : MonoBehaviour
     public List<CellEditor> listCell = new List<CellEditor>();
     public List<Vector2Int> hoverPoints = new List<Vector2Int>();
     public List<BlockEditor> listBlock = new List<BlockEditor>();
-    public Vector2 OffSet => new Vector2(Rows/2f, Columns/2f);
+    public Vector2 OffSet => new Vector2(Columns / 2f, Rows / 2f);
 
     int Rows;
     int Columns;
@@ -39,7 +39,7 @@ public class BoardEditor : MonoBehaviour
                 var pos = GetCellPosition(r, c, Rows, Columns);
                 grid[r, c] = Instantiate(_cellPrefab, pos, Quaternion.identity, _gridTransform);
                 grid[r, c].row = r;
-                grid[r, c].col = r;
+                grid[r, c].col = c;
                 grid[r, c].name = $"( {r}, {c} )";
                 listCell.Add(grid[r, c]);
 
@@ -65,10 +65,16 @@ public class BoardEditor : MonoBehaviour
 
     public void CleadBoard()
     {
+        foreach (var block in listBlock)
+        {
+            block.Destroy();
+        }
         foreach (var cell in listCell)
         {
             cell.Destroy();
         }
+        listCell.Clear();
+        listBlock.Clear();  
     }
 
     public void Hover(Vector2Int point, ShapeData shapeData)
@@ -92,31 +98,27 @@ public class BoardEditor : MonoBehaviour
             {
                 int rowIndex = _shapeData.rows - 1 - r;
                 bool cellValue = _shapeData.board[rowIndex].column[c];
-                if (cellValue == true)
-                {
-                    var hoverPoint = point + new Vector2Int(c, r);
+                if (!cellValue) continue;
 
-                    if (IsValidPoint(hoverPoint) == false)
-                    {
-                        hoverPoints.Clear();
-                        return;
-                    }
+                // không cộng offset nữa, chỉ cộng tương đối
+                Vector2Int hoverPoint = new Vector2Int(point.x + c, point.y + r);
 
-                    hoverPoints.Add(hoverPoint);
-                }
-                else
+                if (!IsValidPoint(hoverPoint))
                 {
-                    Debug.Log("False");
+                    hoverPoints.Clear();
+                    return;
                 }
+
+                hoverPoints.Add(hoverPoint);
             }
         }
     }
 
     bool IsValidPoint(Vector2Int point)
     {
-        if (point.x < 1 || Rows - 1 <= point.x) return false;
-
-        if (point.y < 1 || Columns - 1 <= point.y) return false;
+        // point.x = col, point.y = row
+        if (point.y < 1 || point.y >= Rows - 1) return false;
+        if (point.x < 1 || point.x >= Columns - 1) return false;
 
         if (data[point.y, point.x] > 0) return false;
 
@@ -172,8 +174,8 @@ public class BoardEditor : MonoBehaviour
 
         //float x = basePoint.x - Columns / 2f + offsetX;
         //float z = basePoint.y - Rows / 2f + offsetZ;
-        float x = basePoint.x + offsetX - OffSet.y;
-        float z = basePoint.y + offsetZ - OffSet.x;
+        float x = basePoint.x + offsetX - OffSet.x;
+        float z = basePoint.y + offsetZ - OffSet.y;
 
         return new Vector3(x, 0, z);
     }

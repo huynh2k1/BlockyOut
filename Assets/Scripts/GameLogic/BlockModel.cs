@@ -27,30 +27,7 @@ public class BlockModel : MonoBehaviour
 
     public void ChangeColorByType(ColorType type)
     {
-        switch (type)
-        {
-            case ColorType.Red:
-                ChangeColor(colors.colorRed);
-                break;
-            case ColorType.Green:
-                ChangeColor(colors.colorPurple);
-                break;
-            case ColorType.Purple:
-                ChangeColor(colors.colorPurple);
-                break;
-            case ColorType.Blue1:
-                ChangeColor(colors.colorBlue1);
-                break;
-            case ColorType.Blue2:
-                ChangeColor(colors.colorBlue2);
-                break;
-            case ColorType.Yellow:
-                ChangeColor(colors.colorYellow);
-                break;
-            case ColorType.Orange:
-                ChangeColor(colors.colorOrange);
-                break;
-        }
+        ChangeColor(colors.ConvertColorTypeToColor(type));
     }
 
     public void ChangeColor(Color color)

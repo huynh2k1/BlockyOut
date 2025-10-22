@@ -1049,6 +1049,8 @@ MonoBehaviour:
   _blockPrefab: {fileID: 808262334474952564, guid: 228e2a73eb628414eba110c8c92437ce, type: 3}
   data: {fileID: 11400000, guid: 84de46ae3c06c2f4d8bda1fea241624b, type: 2}
   spacing: 2
+  rows: 2
+  cols: 7
 --- !u!224 &754396087 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5066193460631445709, guid: bc75ce37304f99e419629c13f17bc537, type: 3}

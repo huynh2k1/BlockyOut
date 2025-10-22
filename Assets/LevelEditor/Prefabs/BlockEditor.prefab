@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3562101289220509678}
   - component: {fileID: 808262334474952564}
-  - component: {fileID: 5579111817200166014}
+  - component: {fileID: 3563746708012576671}
   m_Layer: 0
   m_Name: BlockEditor
   m_TagString: Untagged
@@ -184,8 +184,7 @@ MonoBehaviour:
   _cellPrefab: {fileID: 6258462861933587527, guid: 7c65eff7c6bc9a541a19eb505700b040, type: 3}
   _blockPrefab: {fileID: 808262334474952564}
   _shapeData: {fileID: 0}
-  Position: {x: 0, y: 0, z: 0}
---- !u!65 &5579111817200166014
+--- !u!65 &3563746708012576671
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,5 +203,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 1, z: 2}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

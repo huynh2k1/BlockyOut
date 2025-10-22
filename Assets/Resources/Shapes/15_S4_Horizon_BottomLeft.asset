@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ae3340993e458348b815585e5e5024b, type: 3}
-  m_Name: 15_S4_3
+  m_Name: 15_S4_Horizon_BottomLeft
   m_EditorClassIdentifier: 
   columns: 3
   rows: 2
@@ -18,4 +18,4 @@ MonoBehaviour:
   - column: 000001
   - column: 010101
   meshData: {fileID: 4300000, guid: 66e3e78f2ecdc2042b7a99e2bb1361b5, type: 2}
-  rotation: {x: 0, y: 0, z: 180}
+  rotation: {x: 0, y: 0, z: 0}

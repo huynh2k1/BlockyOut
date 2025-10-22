@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4781789827332759570}
   - component: {fileID: 3827194484838885847}
   - component: {fileID: 7746002776935008113}
+  - component: {fileID: 1315067242587979043}
   m_Layer: 0
   m_Name: CellBoard
   m_TagString: Untagged
@@ -86,3 +87,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1315067242587979043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5243791259964282808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee1602d9cdf421f4fbf70a87cc60cdd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Row: 0
+  Col: 0

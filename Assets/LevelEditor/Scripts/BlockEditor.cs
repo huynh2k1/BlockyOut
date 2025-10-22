@@ -13,7 +13,7 @@ public class BlockEditor : MonoBehaviour
     [SerializeField] BlockEditor _blockPrefab;
     [SerializeField] ShapeData _shapeData;
 
-    public Vector3 Position = Vector3.zero;
+    public Vector3 Position => transform.position;
 
     Cell[,] cells;
     Vector2 center;
@@ -69,7 +69,12 @@ public class BlockEditor : MonoBehaviour
 
             transform.position = _curMousePos;
 
-            currentDragPoint = Vector2Int.RoundToInt(new Vector2(transform.position.x, transform.position.z) - center + LevelEditorCtrl.I.board.OffSet/* - center + LevelEditorCtrl.I.board.OffSet*/);
+            currentDragPoint = Vector2Int.RoundToInt(
+                new Vector2(transform.position.x, transform.position.z)
+                - center
+                + LevelEditorCtrl.I.board.OffSet
+            );
+
             LevelEditorCtrl.I.board.Hover(currentDragPoint, _shapeData);
             if (currentDragPoint != previousDragPoint)
             {
@@ -89,13 +94,13 @@ public class BlockEditor : MonoBehaviour
             // ❌ Không có chỗ đặt hợp lệ
             Debug.Log("Không có vị trí hợp lệ, huỷ block");
             board.RemoveBlock(this);
-            Destroy(gameObject);
+            Destroy();
             return;
         }
 
         board.PlaceBlock(this);
 
-        Vector3 snapPos = board.GetSnapPosition(previousDragPoint, _shapeData);
+        Vector3 snapPos = board.GetSnapPosition(currentDragPoint, _shapeData);
         transform.position = snapPos;
         IsInBoard = true;
         // Dọn hover
@@ -110,7 +115,7 @@ public class BlockEditor : MonoBehaviour
         data.Rows = _shapeData.rows;
         data.Cols = _shapeData.columns;
 
-        center = new Vector2(data.Cols * 0.5f, data.Rows * 0.5f);
+        center = new Vector2(data.Cols / 2f, data.Rows / 2f);
         if (blockModel.IsMeshValid(_shapeData))
         {
             blockModel.ChangeMesh(_shapeData);
@@ -137,18 +142,15 @@ public class BlockEditor : MonoBehaviour
         {
             var board = LevelEditorCtrl.I.board;
             board.RemoveBlock(this);
-            Destroy(gameObject);
+            Destroy();
             return;
         }
         blockModel.ChangeColorByType(colorType);
         data.colorBlock = colorType;
     }
 
-    void Hide()
+    public void Destroy()
     {
-        foreach (var cell in cells)
-        {
-            cell.Hide();
-        }
+        Destroy(gameObject);
     }
 }

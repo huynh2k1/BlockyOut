@@ -87,7 +87,9 @@ public class LevelEditorCtrl : MonoBehaviour
     }
     #endregion
 
-    #region BOARD GENERATE
+    #region BOARD Data
+    
+
     void GetRowsFromInput()
     {
         _rows = ParseInputToInt(_rowsInputField);
@@ -118,7 +120,18 @@ public class LevelEditorCtrl : MonoBehaviour
         if (!Directory.Exists(Path.GetDirectoryName(_filePath)))
             Directory.CreateDirectory(Path.GetDirectoryName(_filePath));
 
-        LevelData levelData = new LevelData()
+        // ✅ Load data cũ trước
+        if (File.Exists(_filePath))
+        {
+            string oldJson = File.ReadAllText(_filePath);
+            dataAllLevel = JsonUtility.FromJson<DataAllLevel>(oldJson);
+        }
+        else
+        {
+            dataAllLevel = new DataAllLevel();
+        }
+
+        LevelData levelData = new LevelData
         {
             ID = _levelID,
             Rows = _rows,
@@ -142,12 +155,14 @@ public class LevelEditorCtrl : MonoBehaviour
         for(var i = 0; i < board.listBlock.Count; i++)
         {
             BlockWrapper data = board.listBlock[i].data;
+            Vector3 pos = board.listBlock[i].Position;
             BlockData block = new BlockData
             {
                 id = data.blockID,
-                position = new TransformData(board.listBlock[i].Position),
+                position = new TransformData(pos),
                 blockDir = data.blockDir
             };
+            levelData.Blocks[i] = block;
         }
 
         AddOrUpdateLevel(levelData);

@@ -3,20 +3,24 @@ using System.Collections.Generic;
 
 public class BoardCtrl : MonoBehaviour
 {
-    public int Rows;
-    public int Columns;
+    int Rows;
+    int Columns;
     public const float CellSpace = 0f;
     [SerializeField] Cell cellPrefab;
     [SerializeField] Cell[,] cells;
+    
 
-
-    private void Start()
+    public void Initialize(LevelData levelData)
     {
-        
+        Rows = levelData.Rows;
+        Columns = levelData.Cols;
+        InitGrid(Rows, Columns);
     }
 
-    public void InitGrid()
+    public void InitGrid(int rows, int cols)
     {
+        Rows = rows;
+        Columns = cols; 
         cells = new Cell[Rows, Columns];
 
         for (var r = 0; r < Rows; r++)

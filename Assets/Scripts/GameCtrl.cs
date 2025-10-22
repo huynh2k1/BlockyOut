@@ -3,6 +3,19 @@ using UnityEngine;
 
 public class GameCtrl : BaseGameCtrl
 {
+    public static GameCtrl I;
+    public LevelCtrl levelCtrl;
+
+    private void Awake()
+    {
+        I = this;
+    }
+
+    private void Start()
+    {
+        GameHome();
+    }
+
     private void OnEnable()
     {
         UIHome.OnClickPlayButton += GameStart;
@@ -31,6 +44,7 @@ public class GameCtrl : BaseGameCtrl
     {
         UICtrl.I.Hide(UIType.Home);
         UICtrl.I.Show(UIType.Game);
+        levelCtrl.OnLevelStart();
     }
 
     public override void GameReplay()
