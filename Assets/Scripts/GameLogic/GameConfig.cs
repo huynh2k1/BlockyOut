@@ -13,14 +13,14 @@ namespace GameConfig
     [Serializable]
     public enum ColorType
     {
-        None,
-        Red,
-        Green,
-        Purple,
-        Blue1,
-        Blue2,
-        Yellow,
-        Orange
+        None = 0,
+        Red = 1,
+        Green = 2,
+        Purple = 3,
+        Blue1 = 4,
+        Blue2 = 5,
+        Yellow = 6,
+        Orange = 7
     }
     [Serializable]
     public enum BlockDir

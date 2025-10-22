@@ -9,7 +9,7 @@ public class BlockModel : MonoBehaviour
 
     public MeshFilter meshFilter;
 
-    public Renderer renderer;
+    public Renderer _renderer;
 
     public bool IsMeshValid(ShapeData shapeData)
     {
@@ -32,9 +32,9 @@ public class BlockModel : MonoBehaviour
 
     public void ChangeColor(Color color)
     {
-        if (renderer != null)
+        if (_renderer != null)
         {
-            renderer.material.color = color;
+            _renderer.material.color = color;
         }
     }
 }
