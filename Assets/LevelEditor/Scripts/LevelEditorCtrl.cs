@@ -152,16 +152,15 @@ public class LevelEditorCtrl : MonoBehaviour
             levelData.Cells[i] = cell;
         }
 
-        for(var i = 0; i < board.listBlock.Count; i++)
+        for(int i = 0; i < board.listBlock.Count; i++)
         {
-            BlockWrapper data = board.listBlock[i].data;
             Vector3 pos = board.listBlock[i].Position;
             BlockData block = new BlockData
             {
-                id = data.blockID,
+                id = board.listBlock[i].data.blockID,
                 position = new TransformData(pos),
-                blockDir = data.blockDir,
-                colorType = data.colorBlock
+                blockDir = board.listBlock[i].data.blockDir,
+                colorType = board.listBlock[i].data.colorBlock
             };
             levelData.Blocks[i] = block;
         }
@@ -179,6 +178,10 @@ public class LevelEditorCtrl : MonoBehaviour
     }
     public void AddOrUpdateLevel(LevelData newLevel)
     {
+        // Đảm bảo danh sách tồn tại
+        if (dataAllLevel.Levels == null)
+            dataAllLevel.Levels = new List<LevelData>();
+
         int index = dataAllLevel.Levels.FindIndex(l => l.ID == newLevel.ID);
 
         if (index >= 0)

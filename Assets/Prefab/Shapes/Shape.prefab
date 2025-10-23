@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5213481566894919046}
-  - component: {fileID: 978042014228186957}
   - component: {fileID: 1933122648567551791}
   m_Layer: 0
   m_Name: Shape
@@ -28,34 +27,12 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.48, y: 0.48, z: 0.14013033}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.13137218}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6361501415775220606}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!64 &978042014228186957
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845955459201144478}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 1cd5cf2cac9d08746b5a8bbbf87267e5, type: 2}
 --- !u!114 &1933122648567551791
 MonoBehaviour:
   m_ObjectHideFlags: 0
