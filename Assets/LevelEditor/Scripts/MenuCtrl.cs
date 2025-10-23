@@ -6,8 +6,6 @@ public class MenuCtrl : MonoBehaviour
     public Transform parentCell;
     public CellSelect cellPrefab;
 
-
-
     public void InitMenu()
     {
         //Init Cell Field 

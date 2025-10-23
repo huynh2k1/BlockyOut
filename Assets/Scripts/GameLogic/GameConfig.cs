@@ -25,8 +25,8 @@ namespace GameConfig
     [Serializable]
     public enum BlockDir
     {
-        None,
-        Horizontal,
-        Vertical
+        None = 0,
+        Horizontal = 1,
+        Vertical = 2
     }
 }

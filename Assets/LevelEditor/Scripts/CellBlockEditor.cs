@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Cell : MonoBehaviour
+public class CellBlockEditor : MonoBehaviour
 {
     public int Row;
     public int Col;

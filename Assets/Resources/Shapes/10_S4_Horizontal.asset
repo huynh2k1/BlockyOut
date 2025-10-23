@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae3340993e458348b815585e5e5024b, type: 3}
   m_Name: 10_S4_Horizontal
   m_EditorClassIdentifier: 
+  shapePrefab: {fileID: 3140983853096432290, guid: 925df6046a585904d8dc19962b6d0156, type: 3}
   columns: 4
   rows: 1
   board:

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae3340993e458348b815585e5e5024b, type: 3}
   m_Name: 7_S3_TopRight
   m_EditorClassIdentifier: 
+  shapePrefab: {fileID: 606601257839054337, guid: f211bd86095b26b4eac4f0be99e7aa91, type: 3}
   columns: 2
   rows: 2
   board:
   - column: 0101
   - column: 0001
-  meshData: {fileID: 4300000, guid: d9eb18ca39ed70b41ad978f9bfecf082, type: 2}
+  meshData: {fileID: 4300000, guid: 1cd5cf2cac9d08746b5a8bbbf87267e5, type: 2}
   rotation: {x: 0, y: 0, z: 90}

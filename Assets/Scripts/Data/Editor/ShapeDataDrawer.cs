@@ -32,6 +32,8 @@ public class ShapeDataDrawer : Editor
     public override void OnInspectorGUI()
     {
         serializedObject.Update();
+        DrawShapePrefab();
+        EditorGUILayout.Space();
 
         // --- Phần Mesh + Rotation ---
         DrawMeshSettings();
@@ -69,6 +71,12 @@ public class ShapeDataDrawer : Editor
         {
             ShapeDataInstance.Clear();
         }
+    }
+
+    private void DrawShapePrefab()
+    {
+        EditorGUILayout.LabelField("Shape Prefabs", EditorStyles.boldLabel);
+        ShapeDataInstance.shapePrefab = (Shape)EditorGUILayout.ObjectField("Shape Prefab", ShapeDataInstance.shapePrefab, typeof(Shape), false);
     }
 
     private void DrawMeshSettings()

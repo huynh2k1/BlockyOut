@@ -35,6 +35,8 @@ public class ShapeData : ScriptableObject
         }
     }
 
+    public Shape shapePrefab;
+
     [Header("Grid Setting")]
     public int columns = 0;
     public int rows = 0;

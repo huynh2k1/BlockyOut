@@ -31,6 +31,7 @@ public class BlockSpawner : MonoBehaviour
 
             BlockEditor block = Instantiate(_blockPrefab, _blockParents);
             block.Initialize(data.shapes[i]);
+            block.data.blockID = i;
 
             block.transform.localPosition = new Vector3(
                 col * spacing - xOffset,

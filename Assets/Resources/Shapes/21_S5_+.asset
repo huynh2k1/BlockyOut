@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ae3340993e458348b815585e5e5024b, type: 3}
   m_Name: 21_S5_+
   m_EditorClassIdentifier: 
+  shapePrefab: {fileID: 4533421009968598717, guid: f0b5f89b12557574cb58bec2966abca0, type: 3}
   columns: 3
   rows: 3
   board:

@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colors: {fileID: 11400000, guid: 01e0f82d0b771ea46b3895110e491678, type: 2}
   meshFilter: {fileID: 5245207165117053471}
-  renderer: {fileID: 4564438027300734491}
+  _renderer: {fileID: 4564438027300734491}
 --- !u!1 &9030700393906596431
 GameObject:
   m_ObjectHideFlags: 0

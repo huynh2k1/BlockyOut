@@ -44,8 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74ffbc0726e59645a0859de3c4b17f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockID: 0
-  blockColor: {r: 0, g: 0, b: 0, a: 0}
-  blockDir: 0
-  _cellPrefab: {fileID: 6258462861933587527, guid: 7c65eff7c6bc9a541a19eb505700b040, type: 3}
-  _shapeData: {fileID: 11400000, guid: 8a17c1aa96d0f854194834849685caa5, type: 2}
+  shape: {fileID: 0}

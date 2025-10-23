@@ -9,13 +9,13 @@ public class BlockEditor : MonoBehaviour
 
     [Header("References")]
     [SerializeField] BlockModel blockModel;
-    [SerializeField] Cell _cellPrefab;
+    [SerializeField] CellBlockEditor _cellPrefab;
     [SerializeField] BlockEditor _blockPrefab;
     [SerializeField] ShapeData _shapeData;
 
     public Vector3 Position => transform.position;
 
-    Cell[,] cells;
+    CellBlockEditor[,] cells;
     Vector2 center;
 
     Vector3 _prevMousePos;
@@ -111,7 +111,7 @@ public class BlockEditor : MonoBehaviour
     {
         _shapeData = shapeData;
 
-        cells = new Cell[_shapeData.rows, _shapeData.columns];
+        cells = new CellBlockEditor[_shapeData.rows, _shapeData.columns];
         data.Rows = _shapeData.rows;
         data.Cols = _shapeData.columns;
 

@@ -25,6 +25,7 @@ public class BlockData
 {
     public int id;
     public TransformData position;
+    public ColorType colorType;
     public BlockDir blockDir;
 }
 

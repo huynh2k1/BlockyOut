@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ae3340993e458348b815585e5e5024b, type: 3}
-  m_Name: 1_S1
+  m_Name: 5_[][][]_Vertical
   m_EditorClassIdentifier: 
+  shapePrefab: {fileID: 1912159805733002729, guid: a99bcc9637b7ebe4fbb0fd902a71c116, type: 3}
   columns: 1
-  rows: 1
+  rows: 3
   board:
   - column: 01
-  meshData: {fileID: 4300000, guid: f73ad32942fd5094d9a8fa27a71b29ef, type: 2}
-  rotation: {x: 0, y: 0, z: 0}
+  - column: 01
+  - column: 01
+  meshData: {fileID: 4300000, guid: 73168cfc2e7afc949aec6bb90646a34b, type: 2}
+  rotation: {x: 0, y: 0, z: 90}

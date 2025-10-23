@@ -4,49 +4,49 @@ using UnityEngine.UI;
 public class Block : MonoBehaviour
 {
     public BlockWrapper data;
+    private Shape shape;
+
+    Vector3 inputDelta;
     
-
-    [SerializeField] Cell _cellPrefab;
-    [SerializeField] Cell[,] cells;
-
-    public ShapeData _shapeData;
-    Vector2 center;
-
-
-    private void Start()
+    public void Initialize(int id, ColorType colorType, BlockDir blockDir,ShapeData shapeData)
     {
-        Initialize(_shapeData);
+        shape = Instantiate(shapeData.shapePrefab, transform);
+        transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, shapeData.rotation.z, transform.rotation.z));
+
+        shape.HandleOnMouseDown(HandleOnMouseDown);
+        shape.HandleOnMouseDrag(HandleOnMouseDrag);
+        shape.HandleOnMouseUp(HandleOnMouseUp);
+
+        data.blockID = id;
+        data.colorBlock = colorType;    
+        data.blockDir = blockDir;
+
+        ChangeColorByType();
     }
 
-    public void Initialize(ShapeData shapeData)
+    void HandleOnMouseDown()
     {
-        //_initPos = transform.position;
-        //_initScale = transform.localScale;
-        cells = new Cell[shapeData.rows, shapeData.columns];
-        var Rows = shapeData.rows;
-        var Cols = shapeData.columns;   
-        for (var r = 0; r < shapeData.rows; ++r)
-        {
-            for (var c = 0; c < shapeData.columns; ++c)
-            {
-                int rowIndex = shapeData.rows - 1 - r;
-                //int colIndex = shapeData.columns - 1 - c;
-                bool cellValue = shapeData.board[rowIndex].column[c];
-                if (cellValue)
-                {
-                    cells[r, c] = Instantiate(_cellPrefab, transform);
-                    cells[r, c].transform.localPosition = new Vector3(c - Cols / 2 + 1, 0,r - Rows / 2 + 1);
-                }
-            }
-        }
+
     }
 
-    void Hide()
+    void HandleOnMouseDrag()
     {
-        foreach(var cell in cells)
-        {
-            cell.Hide();
-        }
+
+    }
+
+    void HandleOnMouseUp()
+    {
+
+    }
+
+    public void ChangeColorByType()
+    {
+        shape.ChangeColorByType(data.colorBlock);
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }
 

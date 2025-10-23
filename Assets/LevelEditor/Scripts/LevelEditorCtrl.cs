@@ -160,7 +160,8 @@ public class LevelEditorCtrl : MonoBehaviour
             {
                 id = data.blockID,
                 position = new TransformData(pos),
-                blockDir = data.blockDir
+                blockDir = data.blockDir,
+                colorType = data.colorBlock
             };
             levelData.Blocks[i] = block;
         }
