@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
+    private static Shape currentShapeDragging;
+
     [SerializeField] ColorTypeSO colors;
     public Renderer _renderer;
 
@@ -12,18 +14,40 @@ public class Shape : MonoBehaviour
     private event Action OnMouseDragEvent;
     private event Action OnMouseUpEvent;
 
-    private void OnMouseDown()
+    void Update()
     {
-        OnMouseDownEvent?.Invoke();
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit))
+            {
+                if (hit.collider != null && hit.collider.gameObject == this.gameObject)
+                {
+                    currentShapeDragging = this;
+                    OnMouseDownEvent?.Invoke();
+                }
+            }
+        }
+
+        
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            if (currentShapeDragging == this)
+            {
+                OnMouseUpEvent?.Invoke();
+                currentShapeDragging = null;
+            }
+        }
     }
 
-    private void OnMouseDrag()
+    private void FixedUpdate()
     {
-        OnMouseDragEvent?.Invoke();
-    }
-    private void OnMouseUp()
-    {
-        OnMouseUpEvent?.Invoke();
+        if (Input.GetMouseButton(0))
+        {
+            if (currentShapeDragging == this)
+                OnMouseDragEvent?.Invoke();
+        }
     }
 
     public void HandleOnMouseDown(Action action)

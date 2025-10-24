@@ -5,6 +5,7 @@ using UnityEngine;
 public class CellBoard : MonoBehaviour
 {
     [SerializeField] GameObject field;
+    [SerializeField] GameObject hover;
     public BorderCell border;
 
     public int Row;
@@ -42,5 +43,11 @@ public class CellBoard : MonoBehaviour
     public void EmptyCell()
     {
         gameObject.SetActive(false);
+    }
+
+    public void Hover(bool isHover)
+    {
+        hover.SetActive(isHover);
+
     }
 }

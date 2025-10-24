@@ -39,7 +39,7 @@ public class LevelCtrl : MonoBehaviour
 
     public void OnLevelStart()
     {
-        LevelData data = GetLevelByID(0);
+        LevelData data = GetLevelByID(1);
         boardCtrl.Initialize(data);
     }
 

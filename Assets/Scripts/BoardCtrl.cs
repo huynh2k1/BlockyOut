@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 public class BoardCtrl : MonoBehaviour
 {
+    public static BoardCtrl I;
     public const float CellSpace = 0f;
 
     [Header("References")]
@@ -15,12 +16,20 @@ public class BoardCtrl : MonoBehaviour
     [SerializeField] private Block blockPrefab;
 
     private CellBoard[,] cells;
+    private int[,] data; //0 Empty, 1 Hover, 2 Normal
+
+    private List<Vector2Int> hoverPoints = new List<Vector2Int>();
     private readonly List<CellBoard> listCell = new List<CellBoard>();
     private readonly List<Block> listBlock = new List<Block>();
 
     private int Rows;
     private int Columns;
-    private Vector2 Offset => new Vector2((Columns - 1) / 2f, (Rows - 1) / 2f);
+    public Vector2 Offset => new Vector2((Columns) / 2f, (Rows) / 2f);
+
+    private void Awake()
+    {
+        I = this;
+    }
 
     public void Initialize(LevelData levelData)
     {
@@ -39,7 +48,9 @@ public class BoardCtrl : MonoBehaviour
 
         Rows = rows;
         Columns = cols; 
+
         cells = new CellBoard[Rows, Columns];
+        data = new int[Rows, Columns];
 
         for (var r = 0; r < Rows; r++)
         {
@@ -92,6 +103,89 @@ public class BoardCtrl : MonoBehaviour
         listBlock.Clear();
     }
 
+    #region Block Logic
+    public void Hover(Vector2Int point, ShapeData shapeData)
+    {
+        UnHover();
+        HoverPoints(point, shapeData);
+        if (hoverPoints.Count > 0)
+        {
+            Hover();
+        }
+    }
+
+    private void HoverPoints(Vector2Int point, ShapeData shapeData)
+    {
+        //Duyệt mảng 2 chiều ô nào có giá trị (true) thì hover
+        Debug.Log($"Point: {point}");
+        for (var r = 0; r < shapeData.rows; r++)
+        {
+            for (var c = 0; c < shapeData.columns; c++)
+            {
+                int rowIndex = shapeData.rows - 1 - r;
+                bool cellValue = shapeData.board[rowIndex].column[c];
+                if (!cellValue) continue;
+
+                // không cộng offset nữa, chỉ cộng tương đối
+                Vector2Int hoverPoint = new Vector2Int(point.x + c, point.y + r);
+
+                if (!IsValidPoint(hoverPoint))
+                {
+                    hoverPoints.Clear();
+                    return;
+                }
+
+                hoverPoints.Add(hoverPoint);
+            }
+        }
+    }
+
+    bool IsValidPoint(Vector2Int point)
+    {
+        // point.x = col, point.y = row
+        if (point.y < 1 || point.y >= Rows - 1) return false;
+        if (point.x < 1 || point.x >= Columns - 1) return false;
+
+        if (data[point.y, point.x] > 0) return false;
+
+        return true;
+    }
+
+    private void Hover()
+    {
+        foreach (var hoverPoint in hoverPoints)
+        {
+            data[hoverPoint.y, hoverPoint.x] = 1;
+            cells[hoverPoint.y, hoverPoint.x].Hover(true);
+        }
+    }
+
+    public void UnHover()
+    {
+        foreach (var hoverPoint in hoverPoints)
+        {
+            data[hoverPoint.y, hoverPoint.x] = 0;
+            cells[hoverPoint.y, hoverPoint.x].Hover(false);
+            //grid[hoverPoint.y, hoverPoint.x].();
+        }
+        hoverPoints.Clear();
+    }
+
+    //Tính toán vị trí để đặt block lên board
+    public Vector3 GetSnapPosition(Vector2Int basePoint, ShapeData shapeData)
+    {
+        float offsetX = (shapeData.columns) / 2f;
+        float offsetZ = (shapeData.rows) / 2f;
+
+        //float x = basePoint.x - Columns / 2f + offsetX;
+        //float z = basePoint.y - Rows / 2f + offsetZ;
+        float x = basePoint.x + offsetX - Offset.x;
+        float z = basePoint.y + offsetZ - Offset.y;
+
+        return new Vector3(x, 0, z);
+    }
+    #endregion
+
     #region Cell Logic
     private void SetupBorder(int r, int c, CellBoard cell)
     {
@@ -128,9 +222,9 @@ public class BoardCtrl : MonoBehaviour
 
     private Vector3 GetCellPosition(int row, int col)
     {
-        float offsetX = col - Offset.x;
-        float offsetZ = row - Offset.y;
-        return new Vector3(offsetX, -1, offsetZ);
+        float offsetX = col - (Columns - 1) / 2f;
+        float offsetZ = row - (Rows - 1) / 2f;
+        return new Vector3(offsetX, -0.7f, offsetZ);
     }
     #endregion
 
