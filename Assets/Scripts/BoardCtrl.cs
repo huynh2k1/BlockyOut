@@ -87,8 +87,8 @@ public class BoardCtrl : MonoBehaviour
         for(var i = 0; i < data.Length; i++)
         {
             var b = Instantiate(blockPrefab, transform);
-            b.transform.position = data[i].position.ToVector3();
-            b.Initialize(data[i].id, data[i].colorType, data[i].blockDir, dataBlocks.GetShapeDataByID(data[i].id));
+
+            b.Initialize(data[i].position.ToVector3(), data[i].id, data[i].colorType, data[i].blockDir, dataBlocks.GetShapeDataByID(data[i].id));
         }
     }
 
@@ -104,6 +104,22 @@ public class BoardCtrl : MonoBehaviour
     }
 
     #region Block Logic
+
+    public void PlaceBlock(List<Vector2Int> hoverPoints)
+    {
+        foreach(var p in hoverPoints)
+        {
+            data[p.y, p.x] = 2;
+        }
+    }
+
+    public List<Vector2Int> GetHoverPoints(Vector2Int point, ShapeData shapeData)
+    {
+        UnHover();
+        HoverPoints(point, shapeData);
+
+        return hoverPoints;
+    }
     public void Hover(Vector2Int point, ShapeData shapeData)
     {
         UnHover();
@@ -114,21 +130,25 @@ public class BoardCtrl : MonoBehaviour
         }
     }
 
+    public void ClearDataPoint(Vector2Int point, ShapeData shapeData)
+    {
+        HoverPoints(point, shapeData);
+        UnHover();
+    }
+
     private void HoverPoints(Vector2Int point, ShapeData shapeData)
     {
         //Duyệt mảng 2 chiều ô nào có giá trị (true) thì hover
-        Debug.Log($"Point: {point}");
         for (var r = 0; r < shapeData.rows; r++)
         {
             for (var c = 0; c < shapeData.columns; c++)
             {
-                int rowIndex = shapeData.rows - 1 - r;
+                int rowIndex = shapeData.rows - 1 - r; //đảo ngược hàng để hiển thị đúng
                 bool cellValue = shapeData.board[rowIndex].column[c];
                 if (!cellValue) continue;
 
                 // không cộng offset nữa, chỉ cộng tương đối
                 Vector2Int hoverPoint = new Vector2Int(point.x + c, point.y + r);
-
                 if (!IsValidPoint(hoverPoint))
                 {
                     hoverPoints.Clear();
@@ -184,6 +204,256 @@ public class BoardCtrl : MonoBehaviour
 
         return new Vector3(x, 0, z);
     }
+
+    //Check Block Out
+    public void CanExit(Block block)
+    {
+        if(hoverPoints == null || hoverPoints.Count == 0)
+            return;
+
+        ColorType blockColor = block.data.colorBlock;
+
+        //Danh sách tọa độ point của block đang gần rìa
+        Vector2Int top = Vector2Int.zero;
+        Vector2Int bottom = Vector2Int.zero;
+        Vector2Int left = Vector2Int.zero;
+        Vector2Int right = Vector2Int.zero;
+
+        foreach (var p in hoverPoints)
+        {
+            if (p.y == Rows - 2 && top == Vector2Int.zero)
+            {
+                top = p;
+
+                CellBoard cell = cells[Rows - 1, p.x];
+
+                if(CheckHaveDoor(cell, blockColor))
+                {
+                    //lấy ra được size của cửa
+                    List<CellBoard> doorEdges = GetDoorSize(cell, true);
+                    //lấy ra size của block theo chiều ngang
+                    //nếu size block > size cửa => return;
+                    if (block.data.Cols > doorEdges.Count)
+                    {
+                        Debug.Log($"Block size {block.data.Cols} bigger than door {doorEdges.Count}");
+                        return;
+                    }
+
+                    Debug.LogWarning("Rìa trên có cửa");
+                    if(IsBlockCanExit(block, 1, 0))
+                    {
+                        Debug.Log("Không bị chặn");
+                    }
+                    else
+                    {
+                        Debug.Log("Bị Chặn");
+                    }
+                }
+
+            } //Gần rìa trên
+            if (p.y == 1 && bottom == Vector2Int.zero)
+            {
+                bottom = p; //Gần rìa dưới
+
+                CellBoard cell = cells[0, p.x];
+
+                if (CheckHaveDoor(cell, blockColor))
+                {
+                    //lấy ra được size của cửa
+                    List<CellBoard> doorEdges = GetDoorSize(cell, true);
+                    //lấy ra size của block theo chiều ngang
+                    //nếu size block > size cửa => return;
+                    if (block.data.Cols > doorEdges.Count)
+                    {
+                        Debug.Log($"Block size {block.data.Cols} bigger than door {doorEdges.Count}");
+                        return;
+                    }
+                    Debug.LogWarning("Rìa dưới có cửa");
+                    if (IsBlockCanExit(block, -1, 0))
+                    {
+                        Debug.Log("Không bị chặn");
+                    }
+                    else
+                    {
+                        Debug.Log("Bị Chặn");
+                    }
+                }
+            }
+            if (p.x == 1 && left == Vector2Int.zero) 
+            {
+                left = p; //Gần rìa trái
+
+                CellBoard cell = cells[p.y, 0];
+
+                if (CheckHaveDoor(cell, blockColor))
+                {
+                    //lấy ra được size của cửa
+                    List<CellBoard> doorEdges = GetDoorSize(cell, false);
+                    //lấy ra size của block theo chiều ngang
+                    //nếu size block > size cửa => return;
+                    if (block.data.Rows > doorEdges.Count)
+                    {
+                        Debug.Log($"Block size {block.data.Rows} bigger than door {doorEdges.Count}");
+                        return;
+                    }
+                    Debug.LogWarning("Rìa trái có cửa");
+                    if (IsBlockCanExit(block, 0, -1))
+                    {
+                        Debug.Log("Không bị chặn");
+                    }
+                    else
+                    {
+                        Debug.Log("Bị Chặn");
+                    }
+                    //tính khoảng cách giữa block với rìa -> move block 1 đoạn = 2 lần khoảng cách 
+                    //Xóa block => kiểm tra điều kiện win
+                }
+            }
+            if (p.x == Columns - 2 && right == Vector2Int.zero)
+            {
+                right = p; //Gần rìa phải
+
+                CellBoard cell = cells[p.y, Columns - 1];
+
+                if (CheckHaveDoor(cell, blockColor))
+                {
+                    //lấy ra được size của cửa
+                    List<CellBoard> doorEdges = GetDoorSize(cell, false);
+                    //lấy ra size của block theo chiều ngang
+                    //nếu size block > size cửa => return;
+                    if (block.data.Rows > doorEdges.Count)
+                    {
+                        Debug.Log($"Block size {block.data.Rows} bigger than door {doorEdges.Count}");
+                        return;
+                    }
+                    Debug.LogWarning("Rìa phải có cửa");
+                    if (IsBlockCanExit(block, 0, 1))
+                    {
+                        Debug.Log("Không bị chặn");
+                    }
+                    else
+                    {
+                        Debug.Log("Bị Chặn");
+                    }
+                }
+            }
+        }
+
+        //
+    }
+
+    private bool IsBlockCanExit(Block block, int dR, int dC)
+    {
+        foreach(var pos in block.occupiedPoints)
+        {
+            if(IsPointBlocked(pos, dR, dC) == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //Kiểm tra 1 ô dữ liệu trong grid có bị chặn hay không có bị chặn hay không
+    //0 : không bị chặn, 2 : bị chặn
+    //isHorizon : true -> kiểm tra chiều ngang có bị chặn hay không
+    //isHorizon : false -> kiểm tra chiều dọc có bị chặn hay không
+    //step : 1 - duyệt tăng dần, -1 - duyệt giảm dần
+    private bool IsPointBlocked(Vector2Int point, int dR, int dC)
+    {
+        int r = point.x + dC;
+        int c = point.y + dR;   
+        Vector2Int nextPos = new Vector2Int(r, c);
+
+        while (r >= 1 && r < Rows - 1 && c >= 1 && c < Columns - 1)
+        {
+            Debug.Log($"Row: {r}, Col: {c}, Value: {data[r, c]}");
+            if (data[r, c] == 2 && !hoverPoints.Contains(nextPos))
+                return false;
+            r += dR;
+            c += dC;
+            nextPos = new Vector2Int(r, c);
+        }
+
+        return true;
+    }
+
+    //kiểm tra có cửa và cửa có cùng màu hay không
+    //nếu không có cửa hoặc cửa khác màu => false
+    //nếu có => true
+    bool CheckHaveDoor(CellBoard cellEdge, ColorType colorBlock)
+    {
+        if (cellEdge.cellType != CellBoardType.Border
+        || cellEdge.colorType != colorBlock)
+            return false;
+
+        return true;
+    }
+
+    //truyền vào 1 ô là door và trả về kích thước của cửa
+    private List<CellBoard> GetDoorSize(CellBoard doorCellPos, bool isHorizontal)
+    {
+        List<CellBoard> doorPoints = new List<CellBoard>();
+        doorPoints.Add(doorCellPos);
+
+        int row = doorCellPos.Row;
+        int col = doorCellPos.Col;
+        ColorType colorDoor = cells[row, col].colorType;
+        CellBoard cell = null;
+        if (isHorizontal)
+        {
+            //Duyệt phải
+            for (var i = col + 1; i < Columns; i++)
+            {
+                cell = cells[row, i];
+                if (cell.cellType != CellBoardType.Border
+                    || cell.colorType != colorDoor)
+                {
+                    break;
+                }
+                doorPoints.Add(cell);
+            }
+            //Duyệt trái 
+            for (var i = col - 1; i >= 0; i--)
+            {
+                cell = cells[row, i];
+                if (cell.cellType != CellBoardType.Border
+                    || cell.colorType != colorDoor)
+                {
+                    break;
+                }
+                doorPoints.Add(cell);
+            }
+        }
+        else
+        {
+            //Duyệt trên
+            for (var i = row + 1; i < Rows; i++)
+            {
+                cell = cells[i, col];
+                if (cell.cellType != CellBoardType.Border
+                    || cell.colorType != colorDoor)
+                {
+                    break;
+                }
+                doorPoints.Add(cell);
+            }
+            //Duyệt xuống
+            for (var i = row - 1; i >= 0; i--)
+            {
+                cell = cells[i, col];
+                if (cell.cellType != CellBoardType.Border
+                    || cell.colorType != colorDoor)
+                {
+                    break;
+                }
+                doorPoints.Add(cell);
+            }
+        }
+        return doorPoints;
+
+    }
+
     #endregion
 
     #region Cell Logic

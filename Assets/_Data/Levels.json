@@ -12,7 +12,7 @@
                 },
                 {
                     "cellType": 1,
-                    "colorType": 0
+                    "colorType": 1
                 },
                 {
                     "cellType": 1,
@@ -177,7 +177,7 @@
             ],
             "Blocks": [
                 {
-                    "id": 11,
+                    "id": 6,
                     "position": {
                         "x": -0.5,
                         "y": 0.0,
@@ -187,7 +187,17 @@
                     "blockDir": 0
                 },
                 {
-                    "id": 11,
+                    "id": 2,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 5,
                     "position": {
                         "x": 0.5,
                         "y": 0.0,

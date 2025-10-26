@@ -5,7 +5,9 @@ using System.Drawing;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class BoardEditor : MonoBehaviour
+public class 
+    
+    BoardEditor : MonoBehaviour
 {
     [SerializeField] Transform _gridTransform;
     [SerializeField] CellEditor _cellPrefab;

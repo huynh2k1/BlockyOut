@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CellBoard : MonoBehaviour
 {
+    public CellBoardType cellType;
+    public ColorType colorType;
     [SerializeField] GameObject field;
     [SerializeField] GameObject hover;
     public BorderCell border;
@@ -11,15 +13,17 @@ public class CellBoard : MonoBehaviour
     public int Row;
     public int Col;
 
-    public void Initialize(CellBoardType type, ColorType colorType)
+    public void Initialize(CellBoardType Type, ColorType ColorType)
     {
-        switch (type)
+        cellType = Type;
+        colorType = ColorType;
+        switch (Type)
         {
             case CellBoardType.Field:
                 FieldCell();
                 break;
             case CellBoardType.Border:
-                border.ShowBorderByColorType(colorType);
+                border.ShowBorderByColorType(ColorType);
                 BorderCell();
                 break;
             case CellBoardType.Empty:
