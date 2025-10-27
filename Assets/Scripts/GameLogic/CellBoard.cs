@@ -1,5 +1,4 @@
 using GameConfig;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 public class CellBoard : MonoBehaviour
@@ -12,6 +11,8 @@ public class CellBoard : MonoBehaviour
 
     public int Row;
     public int Col;
+
+    public Vector3 GetPosition => transform.position;
 
     public void Initialize(CellBoardType Type, ColorType ColorType)
     {
@@ -30,6 +31,11 @@ public class CellBoard : MonoBehaviour
                 EmptyCell();
                 break;
         }
+    }
+
+    public void PlayCrushingEffect()
+    {
+        border.PlayCrushingEffect();
     }
 
     public void FieldCell()

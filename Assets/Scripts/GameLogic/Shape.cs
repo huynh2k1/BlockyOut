@@ -14,8 +14,12 @@ public class Shape : MonoBehaviour
     private event Action OnMouseDragEvent;
     private event Action OnMouseUpEvent;
 
+    public bool isOuting { get; set; }
+
     void Update()
     {
+        if (isOuting) return;
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -43,6 +47,7 @@ public class Shape : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isOuting) return;
         if (Input.GetMouseButton(0))
         {
             if (currentShapeDragging == this)

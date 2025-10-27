@@ -3,6 +3,7 @@ using GameConfig;
 using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 public class Block : MonoBehaviour
 {
     Rigidbody rb;
@@ -20,6 +21,10 @@ public class Block : MonoBehaviour
     Vector2Int curGridPos;
 
     public List<Vector2Int> occupiedPoints; //Những ô trên grid mà block đang chiếm đóng
+
+
+    public Vector3 GetPosition => transform.position;   
+
     private void Start()
     {
         if(rb == null)
@@ -57,9 +62,9 @@ public class Block : MonoBehaviour
                 - center
                 + BoardCtrl.I.Offset
             );
-        
-        
-        PlaceBlock(BoardCtrl.I.GetHoverPoints(curGridPos, _shapeData));
+
+
+        PlaceBlock();
     }
 
     void HandleOnMouseDown()
@@ -74,14 +79,20 @@ public class Block : MonoBehaviour
         _prevMousePos = Camera.main.ScreenToWorldPoint(mousePos);
         _prevMousePos.y = transform.position.y;
 
-        curGridPos = Vector2Int.RoundToInt((Vector2)transform.position - center + BoardCtrl.I.Offset);
+        curGridPos = Vector2Int.RoundToInt(
+                new Vector2(transform.position.x, transform.position.z)
+                - center
+                + BoardCtrl.I.Offset
+            );
         prevGridPos = curGridPos;
 
-        BoardCtrl.I.ClearDataPoint(curGridPos, _shapeData);
+        ClearOccupiedPoint();
     }
 
     void HandleOnMouseDrag()
     {
+        if (shape.isOuting)
+            return;
         if (!_isDragging) return;
 
         float distance = Vector3.Distance(Camera.main.transform.position, transform.position);
@@ -100,8 +111,8 @@ public class Block : MonoBehaviour
             rb.linearVelocity = dir / Time.fixedDeltaTime;
 
             // Giới hạn tốc độ (tránh jitter hoặc xuyên do tốc độ cao)
-            if (rb.linearVelocity.magnitude > 15f)
-                rb.linearVelocity = rb.linearVelocity.normalized * 15f;
+            if (rb.linearVelocity.magnitude > 10f)
+                rb.linearVelocity = rb.linearVelocity.normalized * 10f;
 
 
             curGridPos = Vector2Int.RoundToInt(
@@ -127,9 +138,30 @@ public class Block : MonoBehaviour
 
         Vector3 snapPos = BoardCtrl.I.GetSnapPosition(curGridPos, _shapeData);
         transform.position = snapPos;
-        PlaceBlock(BoardCtrl.I.GetHoverPoints(curGridPos, _shapeData));
-        // Dọn hover
+        PlaceBlock();
+    }
+
+    public void StartOut()
+    {
+        rb.isKinematic = true;  // Bắt đầu chịu vật lý
+
+        ClearOccupiedPoint();
         BoardCtrl.I.UnHover();
+        Vector3 snapPos = BoardCtrl.I.GetSnapPosition(curGridPos, _shapeData);
+        transform.position = snapPos;
+    }
+
+    public void BlockOut(Vector3 target, Action actionDone = default)
+    {
+        shape.isOuting = true;
+        
+        transform.DOKill();
+        transform.DOMove(target, 0.5f).SetEase(Ease.Linear).OnComplete(() =>
+        {
+            actionDone?.Invoke();
+
+            Destroy();
+        });
     }
 
     public void ChangeColorByType()
@@ -142,15 +174,17 @@ public class Block : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void PlaceBlock(List<Vector2Int> hoverPoints)
+    public void PlaceBlock()
     {
         ClearOccupiedPoint();
-        occupiedPoints = new List<Vector2Int>(hoverPoints);
-        BoardCtrl.I.PlaceBlock(occupiedPoints);
+        var points = BoardCtrl.I.GetOccupiedPoints(curGridPos, _shapeData);
+        occupiedPoints = new List<Vector2Int>(points);
+        BoardCtrl.I.PlaceBlock(curGridPos, _shapeData);
     }
 
     public void ClearOccupiedPoint()
     {
+        BoardCtrl.I.ClearDataPoint(occupiedPoints);
         occupiedPoints.Clear(); 
     }
 }

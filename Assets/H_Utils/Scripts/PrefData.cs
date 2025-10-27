@@ -2,11 +2,16 @@
 
 public class PrefData
 {
-    public static bool Flag
+    //public static bool Flag
+    //{
+    //    get => PlayerPrefs.GetInt(ConstUtils.TESTFLAG, 0) == 0 ? true : false;
+    //    set => PlayerPrefs.SetInt(ConstUtils.TESTFLAG, value ? 0 : 1);
+    //}
+    public static int CurLevel
     {
-        get => PlayerPrefs.GetInt(ConstUtils.TESTFLAG, 0) == 0 ? true : false;
-        set => PlayerPrefs.SetInt(ConstUtils.TESTFLAG, value ? 0 : 1);
-    }
+        get => PlayerPrefs.GetInt(ConstUtils.CURLEVEL, 0);
+        set => PlayerPrefs.SetInt(ConstUtils.CURLEVEL, value);
+    } 
 }
 
 /// <summary>
@@ -19,6 +24,6 @@ public class PrefData
 public class ConstUtils
 {
     public static string TESTFLAG = "TESTFLAG";
-    public static string TESTINT = "TESTINT";
+    public static string CURLEVEL = "CURLEVEL";
     public static string TESTSTRING = "TESTSTRING";
 }

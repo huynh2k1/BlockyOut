@@ -9,15 +9,18 @@ public class UIWin : BasePopup
 
     [SerializeField] Button _btnHome;
     [SerializeField] Button _btnReplay;
+    [SerializeField] Button _btnNext;
 
     public static Action OnClickHomeButton;
     public static Action OnClickReplayButton;
+    public static Action OnClickNextButton;
 
     public override void Awake()
     {
         base.Awake();
         _btnHome?.onClick.AddListener(HandleHomeBtnClicked);
         _btnReplay?.onClick.AddListener(HandleReplayClicked);
+        _btnNext?.onClick.AddListener(HandleNextClicked);
     }
 
     void HandleHomeBtnClicked()
@@ -30,5 +33,11 @@ public class UIWin : BasePopup
     {
         Hide();
         OnClickReplayButton?.Invoke();  
+    }
+
+    void HandleNextClicked()
+    {
+        Hide();
+        OnClickNextButton?.Invoke();
     }
 }

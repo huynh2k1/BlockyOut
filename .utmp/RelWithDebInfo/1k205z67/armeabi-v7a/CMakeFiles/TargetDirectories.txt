@@ -1,0 +1,5 @@
+D:/MyProjects/_OS/BlockyOut/.utmp/RelWithDebInfo/1k205z67/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/MyProjects/_OS/BlockyOut/.utmp/RelWithDebInfo/1k205z67/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+D:/MyProjects/_OS/BlockyOut/.utmp/RelWithDebInfo/1k205z67/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+D:/MyProjects/_OS/BlockyOut/.utmp/RelWithDebInfo/1k205z67/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+D:/MyProjects/_OS/BlockyOut/.utmp/RelWithDebInfo/1k205z67/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir

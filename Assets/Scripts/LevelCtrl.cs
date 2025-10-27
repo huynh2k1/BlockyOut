@@ -39,31 +39,22 @@ public class LevelCtrl : MonoBehaviour
 
     public void OnLevelStart()
     {
-        LevelData data = GetLevelByID(0);
+        LevelData data = GetLevelByID(PrefData.CurLevel);
         boardCtrl.Initialize(data);
     }
 
-    public void OnLevelWin()
+    public void OnNextLevel()
     {
+        if(PrefData.CurLevel < _levelData.Levels.Count - 1)
+            PrefData.CurLevel++;
+        else
+            PrefData.CurLevel = 0;
 
+        LevelData data = GetLevelByID(PrefData.CurLevel);
+        boardCtrl.Initialize(data);
     }
 
     public void OnLevelLose()
-    {
-
-    }
-
-    public void OnLevelPause()
-    {
-
-    }
-
-    public void OnLevelResume()
-    {
-
-    }
-
-    public void ClearLevel()
     {
 
     }

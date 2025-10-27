@@ -4,11 +4,12 @@ using UnityEngine;
 
 public abstract class BaseGameCtrl : MonoBehaviour
 {
-    public abstract void GameHome();
-    public abstract void GameStart();
-    public abstract void GamePause();
-    public abstract void GameResume();
-    public abstract void GameReplay();
-    public abstract void GameWin();
-    public abstract void GameLose();
+    public virtual void GameHome() { }
+    public virtual void GameStart() { }
+    public virtual void GamePause() { }
+    public virtual void GameResume() { }
+    public virtual void GameReplay() { }
+    public virtual void GameWin() { }
+    public virtual void GameLose() { }
+    public virtual void GameNext() { }
 }

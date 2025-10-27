@@ -12,10 +12,6 @@
                 },
                 {
                     "cellType": 1,
-                    "colorType": 1
-                },
-                {
-                    "cellType": 1,
                     "colorType": 0
                 },
                 {
@@ -37,30 +33,6 @@
                 {
                     "cellType": 1,
                     "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 1,
-                    "colorType": 6
                 },
                 {
                     "cellType": 1,
@@ -88,7 +60,35 @@
                 },
                 {
                     "cellType": 1,
-                    "colorType": 6
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
                 },
                 {
                     "cellType": 1,
@@ -177,7 +177,7 @@
             ],
             "Blocks": [
                 {
-                    "id": 6,
+                    "id": 11,
                     "position": {
                         "x": -0.5,
                         "y": 0.0,
@@ -187,23 +187,13 @@
                     "blockDir": 0
                 },
                 {
-                    "id": 2,
-                    "position": {
-                        "x": -2.0,
-                        "y": 0.0,
-                        "z": 0.0
-                    },
-                    "colorType": 1,
-                    "blockDir": 0
-                },
-                {
-                    "id": 5,
+                    "id": 11,
                     "position": {
                         "x": 0.5,
                         "y": 0.0,
                         "z": -1.0
                     },
-                    "colorType": 6,
+                    "colorType": 7,
                     "blockDir": 0
                 }
             ]
@@ -220,18 +210,6 @@
                 },
                 {
                     "cellType": 1,
-                    "colorType": 6
-                },
-                {
-                    "cellType": 1,
-                    "colorType": 6
-                },
-                {
-                    "cellType": 1,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 1,
                     "colorType": 5
                 },
                 {
@@ -244,27 +222,11 @@
                 },
                 {
                     "cellType": 1,
-                    "colorType": 0
+                    "colorType": 6
                 },
                 {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
-                },
-                {
-                    "cellType": 0,
-                    "colorType": 0
+                    "cellType": 1,
+                    "colorType": 6
                 },
                 {
                     "cellType": 1,
@@ -387,20 +349,48 @@
                     "colorType": 0
                 },
                 {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
                     "cellType": 1,
                     "colorType": 0
                 },
                 {
                     "cellType": 1,
-                    "colorType": 1
+                    "colorType": 0
                 },
                 {
                     "cellType": 1,
-                    "colorType": 1
+                    "colorType": 0
                 },
                 {
                     "cellType": 1,
-                    "colorType": 1
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
                 },
                 {
                     "cellType": 1,
@@ -419,7 +409,7 @@
                         "y": 0.0,
                         "z": 0.0
                     },
-                    "colorType": 1,
+                    "colorType": 5,
                     "blockDir": 0
                 },
                 {
@@ -439,7 +429,2729 @@
                         "y": 0.0,
                         "z": 0.0
                     },
+                    "colorType": 3,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 2,
+            "Rows": 8,
+            "Cols": 8,
+            "Time": 60.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 11,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 5,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
                     "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 6,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 8,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 7,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 3,
+            "Rows": 9,
+            "Cols": 7,
+            "Time": 60.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 12,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 7,
+                    "blockDir": 0
+                },
+                {
+                    "id": 11,
+                    "position": {
+                        "x": 1.5,
+                        "y": 0.0,
+                        "z": 1.5
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": -1.5,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": 1.5,
+                        "y": 0.0,
+                        "z": -1.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 11,
+                    "position": {
+                        "x": -1.5,
+                        "y": 0.0,
+                        "z": -1.5
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 4,
+            "Rows": 8,
+            "Cols": 8,
+            "Time": 60.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 9,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -0.5
+                    },
+                    "colorType": 3,
+                    "blockDir": 0
+                },
+                {
+                    "id": 2,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 2,
+                    "position": {
+                        "x": 0.5,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 11,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 11,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": -1.5
+                    },
+                    "colorType": 7,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": -2.5
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": -1.5
+                    },
+                    "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": -2.5
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 5,
+            "Rows": 9,
+            "Cols": 7,
+            "Time": 90.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 3,
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": -1.0
+                    },
+                    "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 7,
+                    "position": {
+                        "x": 1.5,
+                        "y": 0.0,
+                        "z": 2.5
+                    },
+                    "colorType": 3,
+                    "blockDir": 0
+                },
+                {
+                    "id": 5,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": 2.5
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": -1.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 6,
+            "Rows": 9,
+            "Cols": 7,
+            "Time": 120.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 5,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": 2.5
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 11,
+                    "position": {
+                        "x": 0.5,
+                        "y": 0.0,
+                        "z": 1.5
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 2,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": 0.5
+                    },
+                    "colorType": 3,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": -1.0
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 7,
+                    "position": {
+                        "x": 0.5,
+                        "y": 0.0,
+                        "z": -1.5
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 1,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 4,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 7,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 7,
+            "Rows": 8,
+            "Cols": 8,
+            "Time": 120.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 4,
+                    "position": {
+                        "x": -2.5,
+                        "y": 0.0,
+                        "z": 0.5
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": -1.5,
+                        "y": 0.0,
+                        "z": 2.5
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 2,
+                    "position": {
+                        "x": 1.5,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 2,
+                    "position": {
+                        "x": 1.5,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 7,
+                    "blockDir": 0
+                },
+                {
+                    "id": 2,
+                    "position": {
+                        "x": 2.5,
+                        "y": 0.0,
+                        "z": -1.0
+                    },
+                    "colorType": 7,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": 1.5,
+                        "y": 0.0,
+                        "z": -2.5
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 7,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": -0.5
+                    },
+                    "colorType": 3,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": 0.5
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 8,
+            "Rows": 9,
+            "Cols": 6,
+            "Time": 60.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 9,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -3.0
+                    },
+                    "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 9,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 9,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": -1.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 9,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 0.0
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 9,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "colorType": 7,
+                    "blockDir": 0
+                },
+                {
+                    "id": 9,
+                    "position": {
+                        "x": 0.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                }
+            ]
+        },
+        {
+            "ID": 9,
+            "Rows": 9,
+            "Cols": 7,
+            "Time": 120.0,
+            "Cells": [
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 7
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 2
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 6
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 0,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 3
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 5
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 1
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 4
+                },
+                {
+                    "cellType": 1,
+                    "colorType": 0
+                }
+            ],
+            "Blocks": [
+                {
+                    "id": 0,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": 2.0
+                    },
+                    "colorType": 7,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": -2.0,
+                        "y": 0.0,
+                        "z": 1.0
+                    },
+                    "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 5,
+                    "position": {
+                        "x": -1.5,
+                        "y": 0.0,
+                        "z": -0.5
+                    },
+                    "colorType": 6,
+                    "blockDir": 0
+                },
+                {
+                    "id": 7,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": -0.5
+                    },
+                    "colorType": 1,
+                    "blockDir": 0
+                },
+                {
+                    "id": 3,
+                    "position": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": -1.0,
+                        "y": 0.0,
+                        "z": -2.0
+                    },
+                    "colorType": 3,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": 1.0,
+                        "y": 0.0,
+                        "z": -1.0
+                    },
+                    "colorType": 2,
+                    "blockDir": 0
+                },
+                {
+                    "id": 8,
+                    "position": {
+                        "x": 1.5,
+                        "y": 0.0,
+                        "z": 0.5
+                    },
+                    "colorType": 5,
+                    "blockDir": 0
+                },
+                {
+                    "id": 5,
+                    "position": {
+                        "x": -0.5,
+                        "y": 0.0,
+                        "z": 2.5
+                    },
+                    "colorType": 4,
+                    "blockDir": 0
+                },
+                {
+                    "id": 7,
+                    "position": {
+                        "x": 0.5,
+                        "y": 0.0,
+                        "z": 2.5
+                    },
+                    "colorType": 3,
+                    "blockDir": 0
+                },
+                {
+                    "id": 0,
+                    "position": {
+                        "x": 2.0,
+                        "y": 0.0,
+                        "z": 3.0
+                    },
+                    "colorType": 1,
                     "blockDir": 0
                 }
             ]

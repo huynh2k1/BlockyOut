@@ -8,6 +8,7 @@ public class GameCtrl : BaseGameCtrl
 
     private void Awake()
     {
+        Application.targetFrameRate = 120;
         I = this;
     }
 
@@ -18,20 +19,40 @@ public class GameCtrl : BaseGameCtrl
 
     private void OnEnable()
     {
+        //UIHome
         UIHome.OnClickPlayButton += GameStart;
-        UIGame.OnClickPauseButton += GameHome;
 
+        //UIGame
+        UIGame.OnClickPauseButton += GameHome;
+        UIGame.OnClickReplayButton += GameReplay;
+
+        //UIWin
         UIWin.OnClickHomeButton += GameHome;
         UIWin.OnClickReplayButton += GameReplay;
+        UIWin.OnClickNextButton += GameNext;
+
+        //UILose
+        UILose.OnClickHomeButton += GameHome;
+        UILose.OnClickReplayButton += GameReplay;
     }
 
     private void OnDisable()
     {
+        //UIHome
         UIHome.OnClickPlayButton -= GameStart;
-        UIGame.OnClickPauseButton -= GameHome;
 
+        //UIGame
+        UIGame.OnClickPauseButton -= GameHome;
+        UIGame.OnClickReplayButton -= GameReplay;
+
+        //UIWin
         UIWin.OnClickHomeButton -= GameHome;
-        UIWin.OnClickReplayButton -= GameReplay;    
+        UIWin.OnClickReplayButton -= GameReplay;
+        UIWin.OnClickNextButton -= GameNext;
+        
+        //UILose    
+        UILose.OnClickHomeButton -= GameHome;
+        UILose.OnClickReplayButton -= GameReplay;
     }
 
     public override void GameHome()
@@ -49,22 +70,21 @@ public class GameCtrl : BaseGameCtrl
 
     public override void GameReplay()
     {
-        
+        levelCtrl.OnLevelStart();
     }
 
-    public override void GamePause()
+    public override void GameNext()
     {
-    }
-
-    public override void GameResume()
-    {
+        levelCtrl.OnNextLevel();
     }
 
     public override void GameLose()
     {
+        UICtrl.I.Show(UIType.Lose);
     }
 
     public override void GameWin()
     {
+        UICtrl.I.Show(UIType.Win);
     }
 }
