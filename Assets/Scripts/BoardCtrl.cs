@@ -35,11 +35,16 @@ public class BoardCtrl : MonoBehaviour
     {
         Rows = levelData.Rows;
         Columns = levelData.Cols;
+        float time = levelData.Time;
+
+        TimeCtrl.I.SetTime(time);
 
         InitGrid(Rows, Columns);
         LoadCellType(levelData.Cells);
 
         InitBlocks(levelData.Blocks);
+
+
     }
 
     public void InitGrid(int rows, int cols)

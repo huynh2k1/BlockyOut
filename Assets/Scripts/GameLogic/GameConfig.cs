@@ -2,6 +2,12 @@
 
 namespace GameConfig
 {
+    public enum GameState
+    {
+        None,
+        Playing,
+    }
+
     [Serializable]
     public enum CellBoardType
     {

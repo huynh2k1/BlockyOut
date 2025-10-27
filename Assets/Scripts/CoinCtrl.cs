@@ -1,19 +1,21 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
-public class CoinPanel : MonoBehaviour
+public class CoinCtrl : MonoBehaviour
 {
+    public static CoinCtrl I;
     [SerializeField] Text coinText;
-    private int coin = 15723;
+
 
     void Start()
     {
-        UpdateText(coin);
+        I = this;
     }
 
-    void UpdateText(int value)
+    public void UpdateText()
     {
-        coinText.text = value.ToString("N0");
+        coinText.text = PrefData.Coin.ToString("N0");
         // "N0" => định dạng số có dấu phẩy ngăn cách hàng nghìn, không có số lẻ
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 248548417721858520}
   - component: {fileID: 7932505423789188967}
   - component: {fileID: 5604899242562883}
+  - component: {fileID: 4404589607243680757}
   m_Layer: 0
   m_Name: H_Button
   m_TagString: Untagged
@@ -122,6 +123,31 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4404589607243680757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604307509729854618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e191bd0c21546a742bbc0e1d90053b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resetSizeOnEnable: 1
+  lightSweep: {fileID: 0}
+  sweepDuration: 0.75
+  delayEachLoop: 2.5
+  _lightSweepStartPos: {x: 0, y: 0}
+  scaleFrequently: 0
+  targetScale: {x: 1.2, y: 1.2}
+  delayScale: 2
+  scaleDuration: 0.5
+  scaleOnClick: 1
+  durationScale: 0.2
+  scales: -0.1
+  easeScaleClick: 7
 --- !u!1 &996218817860395582
 GameObject:
   m_ObjectHideFlags: 0

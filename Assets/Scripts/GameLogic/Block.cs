@@ -69,6 +69,7 @@ public class Block : MonoBehaviour
 
     void HandleOnMouseDown()
     {
+        SoundManager.I.PlaySoundByType(TypeSound.CLICK);
         _isDragging = true;
         rb.isKinematic = false;  // Bắt đầu chịu vật lý
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BorderCell : MonoBehaviour
 {
+    [SerializeField] AudioSource sound;
     [SerializeField] ColorTypeSO colors;
     [SerializeField] Renderer _doorRenderer;
     [SerializeField] ParticleSystem _effectBroken;
@@ -21,8 +22,12 @@ public class BorderCell : MonoBehaviour
     {
         _effectBroken.Play();
 
+        sound.Play();
         _borderDoor.transform.DOKill();
-        _borderDoor.transform.DOLocalMoveY(0.4f, 0.5f).SetEase(Ease.Linear).SetLoops(2, LoopType.Yoyo);
+        _borderDoor.transform.DOLocalMoveY(0.4f, 0.3f).SetEase(Ease.Linear).SetLoops(2, LoopType.Yoyo).OnComplete(() =>
+        {
+            sound.Stop();
+        });
         _borderDoor.transform.DOLocalRotate(new Vector3(720f, 90f, 90f), 1f, RotateMode.FastBeyond360).SetEase(Ease.Linear);
     }
 

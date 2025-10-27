@@ -39,6 +39,7 @@ public class LevelCtrl : MonoBehaviour
 
     public void OnLevelStart()
     {
+        TimeCtrl.I.ResetTimer();
         LevelData data = GetLevelByID(PrefData.CurLevel);
         boardCtrl.Initialize(data);
     }

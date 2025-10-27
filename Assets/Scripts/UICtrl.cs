@@ -5,6 +5,8 @@ using H_Utils;
 public class UICtrl : BaseUICtrl
 {
     public static UICtrl I;
+    public UIGame uiGame;
+
     protected override void Awake()
     {
         base.Awake();
@@ -24,5 +26,11 @@ public class UICtrl : BaseUICtrl
     public void ShowHowToPlay()
     {
         Show(UIType.HowToPlay);
+    }
+
+    public void ReloadUI()
+    {
+        uiGame.ReloadUI();
+        CoinCtrl.I.UpdateText();
     }
 }
