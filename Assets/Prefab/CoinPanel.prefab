@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2541704428006451485}
   - component: {fileID: 1538124031475876350}
   - component: {fileID: 5242193826877165510}
-  - component: {fileID: 1105302161461686544}
   m_Layer: 0
   m_Name: CoinPanel
   m_TagString: Untagged
@@ -77,19 +76,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1105302161461686544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8237811632323876200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e485ea85b7b17c43b7aaea28d20aaec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textCoin: {fileID: 8994833236073288859}
 --- !u!1001 &3049174369631260109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -247,14 +233,3 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5643323533571515369, guid: baf410d3b5361cd488967b80360f2aff, type: 3}
   m_PrefabInstance: {fileID: 3049174369631260109}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8994833236073288859 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6234326333365573974, guid: baf410d3b5361cd488967b80360f2aff, type: 3}
-  m_PrefabInstance: {fileID: 3049174369631260109}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440395979559612844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

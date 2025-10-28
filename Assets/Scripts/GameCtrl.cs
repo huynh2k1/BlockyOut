@@ -11,7 +11,7 @@ public class GameCtrl : BaseGameCtrl
     public GameState CurState;
     private void Awake()
     {
-        Application.targetFrameRate = 120;
+        Application.targetFrameRate = 60;
         I = this;
     }
 

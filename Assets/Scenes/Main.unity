@@ -539,6 +539,7 @@ Transform:
   - {fileID: 1262293375}
   - {fileID: 135983807}
   - {fileID: 75533337}
+  - {fileID: 2052790860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &247583082
@@ -3442,7 +3443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6234326333365573974, guid: baf410d3b5361cd488967b80360f2aff, type: 3}
       propertyPath: m_Text
-      value: Move All Block
+      value: "\rPress and hold to slide the block to the same color door"
       objectReference: {fileID: 0}
     - target: {fileID: 6234326333365573974, guid: baf410d3b5361cd488967b80360f2aff, type: 3}
       propertyPath: m_FontData.m_Font
@@ -4502,6 +4503,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010697931}
   m_CullTransparentMesh: 1
+--- !u!1 &2052790859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052790860}
+  - component: {fileID: 2052790861}
+  m_Layer: 0
+  m_Name: CoinCtrl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052790860
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052790859}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 225459205}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2052790861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052790859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e485ea85b7b17c43b7aaea28d20aaec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinText: {fileID: 33843651}
 --- !u!1001 &2099806191
 PrefabInstance:
   m_ObjectHideFlags: 0
