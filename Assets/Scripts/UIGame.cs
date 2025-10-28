@@ -58,6 +58,7 @@ public class UIGame : BaseUI
     public void CheckPauseTimeCanClick()
     {
         bool isShow = (PrefData.Coin >= 200) ? false : true;
+        _btnPauseTime.interactable = !isShow;
         ShowPauseClickedUI(isShow);
     }
 

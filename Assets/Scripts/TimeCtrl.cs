@@ -80,6 +80,6 @@ public class TimeCtrl : MonoBehaviour
 
     public void ShowTimePauseObj(bool isShow)
     {
-        timePauseObj.SetActive(isShow);
+        //timePauseObj.SetActive(isShow);
     }
 }

@@ -81,12 +81,14 @@ public class GameCtrl : BaseGameCtrl
 
     public override void GameReplay()
     {
+        UICtrl.I.ReloadUI();
         ChangeState(GameState.Playing);
         levelCtrl.OnLevelStart();
     }
 
     public override void GameNext()
     {
+        UICtrl.I.ReloadUI();
         levelCtrl.OnNextLevel();
         ChangeState(GameState.Playing);
     }
